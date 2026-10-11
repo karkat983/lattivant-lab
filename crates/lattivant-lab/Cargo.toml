@@ -1,0 +1,31 @@
+[package]
+name = "lattivant-lab"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Integrated security lab: a reproducible scenario that links all Lattivant engines."
+
+[[bin]]
+name = "lattivant-lab"
+path = "src/main.rs"
+
+[dependencies]
+lattivant-event.workspace = true
+agenttrace-core.workspace = true
+agenttrace-correlate.workspace = true
+agenttrace-detect.workspace = true
+evidence-graph-core.workspace = true
+evidence-graph-correlate.workspace = true
+eastwest-flow.workspace = true
+eastwest-ingest.workspace = true
+eastwest-baseline.workspace = true
+investigator-ground.workspace = true
+investigator-incident.workspace = true
+investigator-report.workspace = true
+indexmap.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+chrono.workspace = true
+
+[dev-dependencies]
