@@ -1,0 +1,33 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.80"
+license = "MIT"
+authors = ["Karthik Katuri"]
+repository = "https://github.com/karkat983/lattivant-lab"
+
+[workspace.dependencies]
+lattivant-event = { git = "https://github.com/karkat983/lattivant-platform.git", branch = "main" }
+agenttrace-core = { git = "https://github.com/karkat983/agenttrace.git", branch = "main" }
+agenttrace-correlate = { git = "https://github.com/karkat983/agenttrace.git", branch = "main" }
+agenttrace-detect = { git = "https://github.com/karkat983/agenttrace.git", branch = "main" }
+evidence-graph-core = { git = "https://github.com/karkat983/evidence-graph.git", branch = "main" }
+evidence-graph-correlate = { git = "https://github.com/karkat983/evidence-graph.git", branch = "main" }
+eastwest-flow = { git = "https://github.com/karkat983/eastwest.git", branch = "main" }
+eastwest-ingest = { git = "https://github.com/karkat983/eastwest.git", branch = "main" }
+eastwest-baseline = { git = "https://github.com/karkat983/eastwest.git", branch = "main" }
+investigator-ground = { git = "https://github.com/karkat983/investigator.git", branch = "main" }
+investigator-incident = { git = "https://github.com/karkat983/investigator.git", branch = "main" }
+investigator-report = { git = "https://github.com/karkat983/investigator.git", branch = "main" }
+indexmap = { version = "2.6", features = ["serde"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+
+[profile.release]
+opt-level = 3
+lto = "thin"
